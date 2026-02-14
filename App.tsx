@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,26 +7,34 @@ import PolaroidCarousel from './components/PolaroidCarousel';
 import VoucherCard from './components/VoucherCard';
 import { Voucher } from './types';
 
-// The four couple images provided
+// BILD-IMPORTS: Vite verarbeitet diese Bilder nun als Assets
+// Stelle sicher, dass die Dateien exakt so im Hauptordner liegen
+import imgCouple1 from './couple1.jpg';
+import imgCouple2 from './couple2.jpg';
+import imgCouple3 from './couple3.jpg';
+import imgCouple4 from './couple4.jpg';
+import imgSpa1 from './spa1.jpg';
+import imgSpa2 from './spa2.jpg';
+
 const COUPLE_IMAGES = [
-  'couple1.jpg', // Red dress photo
-  'couple2.jpg', // Black and white photo
-  'couple3.jpg', // Leather jackets photo
-  'couple4.jpg'  // Sunset lookout photo
+  imgCouple1,
+  imgCouple2,
+  imgCouple3,
+  imgCouple4
 ];
 
 const VOUCHERS: Voucher[] = [
   {
     id: 'wed',
     day: 'Mittwoch',
-    image: 'spa1.jpg',
+    image: imgSpa1,
     price: '3 Küsse 🥰🥰',
     kissesCount: 3
   },
   {
     id: 'thu',
     day: 'Donnerstag',
-    image: 'spa2.jpg',
+    image: imgSpa2,
     price: '5 Küsse 🥰🥰🥰',
     kissesCount: 5
   }
